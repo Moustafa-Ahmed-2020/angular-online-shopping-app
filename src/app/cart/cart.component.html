@@ -1,0 +1,19 @@
+<form #form="ngForm" (ngSubmit)="submitForm()" class="font">    
+    <div fxLayout="row wrap" class="cart-item" *ngFor="let cartItem of cartProducts">
+        <div class="cart-image" fxLayout="column" fxLayoutGap="10px">
+            <img src="{{cartItem.url}}" width="70px">
+            <button class="btn btn-danger" (click)="removeFromCart(cartItem)">Remove</button>
+        </div>
+        <div>
+            <h3>Item: {{cartItem.name}}</h3>
+            <h6>Quantity: <input type="number" name="quantity" placeholder="1" (change)="calculateGrandTotal()" value="quantity" [(ngModel)]="cartItem.quantity"></h6>
+            <h6>Price: {{cartItem.price}}</h6>
+            <h6>Total: {{cartItem.quantity*cartItem.price | number: '1.1-3'}}</h6>
+        </div>
+    </div>
+</form>
+<div class="font" fxLayout="row wrap" fxLayoutGap="50px">
+    <button class="btn btn-danger" (click)="clearCart()">Clear cart</button>
+    <h3>Grand Total: {{grandTotal | number: '1.1-3'}}</h3>
+    <button class="btn btn-primary" type="submit" routerLink="/checkout">Checkout</button>
+</div>

@@ -1,4 +1,7 @@
+import { HttpService } from '../services/http.service';
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../Models/Product';
+import { WishListService } from '../services/wish-list.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  productList: Product[] = [];
+
+  constructor(private productService: HttpService, private wish: WishListService) { }
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe(res => {      
+    this.productList = res;
+        }
+    );   
+       
   }
 
 }

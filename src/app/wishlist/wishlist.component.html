@@ -1,0 +1,14 @@
+<div class="font bookmark-list">
+    <ul *ngFor="let item of wishListedItems">
+        <a routerLink="product/{{item.id}}">{{item.name}}</a>
+    </ul>
+</div>
+
+<button class="btn btn-primary" (click)="clear()">Clear</button>
+
+
+
+
+
+
+

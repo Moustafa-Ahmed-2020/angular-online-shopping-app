@@ -1,0 +1,36 @@
+.font {
+    font-family: 'Oswald', sans-serif;
+}
+
+.checkout-main {
+    padding: 100px;
+    width: 600px;
+    margin: 50px 50px 50px 50px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+.checkout-item {
+    border-bottom: 1px solid grey;
+}
+
+.checkout-payment {
+    padding: 50px;
+    width: 600px;
+    margin: 50px 50px 50px 50px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+label{
+    display: block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: left;
+}
+input {
+  display: block;
+  float: left;
+  width: 300px;
+}

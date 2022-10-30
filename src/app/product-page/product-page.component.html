@@ -1,0 +1,20 @@
+<div class="container font" fxLayout="column wrap" fxLayoutGap="">
+    <h2 class="text-center">{{product.name}}</h2>
+    <div fxLayout="row wrap">                
+        <div>
+            <img class="product-image" src="{{product.url}}" width="300px"/>
+        </div>
+        <div class="product-data" fxLayout="column">
+            <div>
+                <p>Price: {{product.price}}</p>
+                <p>Rating: {{product.reviews}}</p> 
+                <p>Description: {{product.description}}</p>               
+            </div>
+            <div fxLayout="row" fxLayoutGap="120px">
+                <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+                <button class="btn btn-primary" (click)="wishList(product)">Wishlist</button>
+            </div>      
+
+        </div>
+    </div>
+    </div>

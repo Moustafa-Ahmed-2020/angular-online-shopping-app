@@ -1,0 +1,25 @@
+.font {
+    font-family: 'Oswald', sans-serif;    
+}
+
+#head {
+    position: static;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;    
+    height: 50px;
+    padding-top: 10px;
+    background-color: navy;
+}
+
+a {
+    color: white;   
+    padding: 30px;
+    text-decoration: none;
+}
+
+a:hover {
+    color:cyan;
+    transition: color 1s ease;
+}
+

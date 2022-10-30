@@ -1,0 +1,32 @@
+<div class="font" fxLayout="row wrap">    
+    <div fxLayout="column wrap" class="checkout-main">
+        <h3 class="text-center">Order details</h3>
+        <div class="checkout-item" *ngFor="let cartItem of cartProducts">
+            <h3>Item: {{cartItem.name}}</h3>
+            <h6>Quantity: {{cartItem.quantity}}</h6>
+            <h6>Price: {{cartItem.price}}</h6>
+            <h6>Total: {{cartItem.price*cartItem.quantity}}</h6>
+        </div>
+        <h3>Grand Total: {{total}}</h3>
+    </div>
+    <div class="checkout-payment">
+        <form  #form="ngForm" class="font" fxLayout="column wrap" fxLayoutGap="30px"> 
+            <h3 class="text-center">Payment details</h3> 
+            <div>
+                <label>Name: </label><input type="text" name="username" [(ngModel)]="username" (ngModelChange)="validateName(username)" required>
+            </div>
+            <div>
+                <label>Card Number: </label><input type="number" name="cardnumber" [(ngModel)]="cardnumber" required maxlength="16" (ngModelChange)="validateCard(cardnumber)">
+            </div>
+            <div>
+                <label>CVV: </label> <input type="number" name="cvv" [(ngModel)]="cvv" required minlength="3">  
+            </div>
+            <div>
+                <label>Address: </label><input type="text" name="adress" [(ngModel)]="address" required>
+            </div>                              
+            <button [disabled]="form.invalid" class="btn btn-primary" (click)="checkout()" routerLink="/success">Confirm</button>                 
+        </form>
+    </div>    
+</div>
+
+

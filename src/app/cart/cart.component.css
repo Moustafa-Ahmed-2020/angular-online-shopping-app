@@ -1,0 +1,15 @@
+.font {
+    font-family: 'Oswald', sans-serif;
+}
+
+.cart-item {   
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin:10px;
+    width:400px;
+    padding: 20px;
+}
+
+.cart-image {
+    margin-right: 30px;
+}

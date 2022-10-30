@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
+## Project description
+
+This project is a single page application that represents an online store, where you can vew and buy products. The application is modular and each route is a separate component, the main component is the home component where he product list lives and each product can be viewed indiviually in the product-page component where you can see its description, once you like a product and add it to the cart (the component name..well "cart") you can modify the quantity of the items as you like and then proceed to the checkout component. From there you can enter payment details (not real details of course) and confirm your purchase. The final page is just like confirmation message. Data is transfered between most components is through services, since parent-child component relationship is only present between home and product components.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
